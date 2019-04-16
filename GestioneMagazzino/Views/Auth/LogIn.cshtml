@@ -4,7 +4,12 @@
 
 <section class="container h-100">
     <div class="flex-row d-flex flex-wrap justify-content-center align-items-center">
-        <form asp-action="DoLogin" method="post">
+        <form asp-action="DoLogin"
+              data-ajax="true"
+              data-ajax-method="POST"
+              data-ajax-mode="replace"
+              data-ajax-update="#ajaxresult"
+              class="col-12">
             <div class="form-group"> 
                 <label for="Username" class="col-form-label" >Username:</label>
                 <input type="email" id="Username" name="Username" class="form-control border-top-0 border-left-0 border-right-0" required />
@@ -15,5 +20,10 @@
             </div>
             <button class="btn btn-primary btn-block" type="submit">LogIn</button>
         </form>
+        <div class="col-24 justify-content-center d-flex flex-wrap pt-5">
+            <div class="alert alert-danger d-flex flex-wrap col-12" id="ajaxresult">
+
+            </div>
+        </div>
     </div>
 </section>

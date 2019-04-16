@@ -24,7 +24,7 @@ namespace GestioneMagazzino.Controllers
             return View();
         }
         [HttpPost()]
-        public IActionResult DoLogin([FromBody] UserViewModel user)
+        public IActionResult DoLogin([FromForm] UserViewModel user)
         {
             if (user.Password != "123") return Json("Password errata");
             var requestAt = DateTime.UtcNow;

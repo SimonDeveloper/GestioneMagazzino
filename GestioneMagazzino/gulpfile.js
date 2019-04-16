@@ -22,6 +22,7 @@ function js() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/popper.js/dist/umd/popper.js',
         'node_modules/bootstrap/dist/js/bootstrap.js',
+        'node_modules/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.js',
         //'node_modules/requirejs/require.js',
         'Assets/js/*.js'
     ], { sourcemaps: true })//source dei nostri js da elaborare
