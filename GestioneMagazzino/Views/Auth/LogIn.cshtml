@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="container h-100">
+    <div class="flex-row d-flex flex-wrap justify-content-center align-items-center">
+        <form asp-action="DoLogin" method="post">
+            <div class="form-group"> 
+                <label for="Username" class="col-form-label" >Username:</label>
+                <input type="email" id="Username" name="Username" class="form-control border-top-0 border-left-0 border-right-0" required />
+            </div>
+            <div class="form-group">
+                <label for="Password" class="col-form-label">Password:</label>
+                <input type="password" id="Password" name="Password" class="form-control border-top-0 border-left-0 border-right-0" required />
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">LogIn</button>
+        </form>
+    </div>
+</section>

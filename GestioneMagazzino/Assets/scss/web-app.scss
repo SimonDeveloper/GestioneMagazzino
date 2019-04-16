@@ -1,0 +1,95 @@
+﻿@import "google-font-montserrat.scss";
+
+
+$font-family-sans-serif: "Montserrat", sans-serif !default;
+
+/* override dei breakpoint di bootstrap*/
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px, fhd: 1920px, 4k: 2560px, uhd: 3840px ) !default;
+
+/* override delle massime grandezze dei container */
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1340px, fhd: 1860px, 4k: 2500px, uhd: 3780px) !default;
+
+$grid-columns: 24 !default;
+
+//$dark: rgba(255, 0, 0, 0.5);
+$input-btn-focus-width: .2rem !default;
+$input-btn-focus-color: transparent !default;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+
+$input-focus-border-color: #ff6a00 !default;
+$input-border-color: #b200ff !default;
+
+$input-border-radius: 0 !default;
+$input-border-radius-lg: 0 !default;
+$input-border-radius-sm: 0 !default;
+
+$input-material-border-color: #ff6a00 ;
+$input-material-border-color-focus: #1abc9c;
+
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+$fsizes: 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9;
+$min-font-size: 0;
+$max-font-size: 20;
+
+@for $i from $min-font-size through $max-font-size {
+    @each $ssize in $fsizes {
+        .fs-#{$i}-#{$ssize*10} {
+            font-size: 0rem + $i + $ssize !important;
+        }
+    }
+}
+
+$min-h-size: 0;
+$max-h-size: 200;
+
+@for $i from $min-h-size through $max-h-size {
+       .min-h-#{$i} {
+            min-height: 0px + $i !important;
+        }
+        .max-h-#{$i} {
+            max-height: 0px + $i !important;
+        }
+        .mt-h-#{$i} {
+            margin-top: 0px + $i !important;
+        }
+        .mb-h-#{$i} {
+            margin-bottom: 0px + $i !important;
+        } 
+}
+
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 10px 5px;
+    background: white no-repeat;
+    /*
+	* IMPORTANT PART HERE
+	*/
+    /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
+    background-image: linear-gradient(to bottom, $input-material-border-color-focus, $input-material-border-color-focus), linear-gradient(to bottom, $input-material-border-color, $input-material-border-color);
+    /* sizes for the 2 images (default state) */
+    background-size: 0 2px, 100% 1px;
+    /* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
+    background-position: 50% 100%, 50% 100%;
+    /* animation solely on background-size */
+    transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+.form-control:focus {
+    /* sizes for the 2 images (focus state) */
+    background-size: 100% 2px, 100% 1px;
+    outline: none;
+}
+
+
+
+
+

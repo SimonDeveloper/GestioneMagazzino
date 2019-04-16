@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="container bg-dark h-100 ">
+    <div class="flex-row d-flex flex-wrap">
+        @foreach (var i in Enumerable.Range(1, 48))
+        {
+            <div class="col-12 col-md-8 col-xl-4 col-fhd-2 col-4k-1 bg-light justify-content-center align-items-center d-flex flex-wrap min-h-100">
+                <h1 class="fs-0-8 m-0">Col @i  </h1>
+            </div>
+            
+        }
+    </div>
+
+</section>
