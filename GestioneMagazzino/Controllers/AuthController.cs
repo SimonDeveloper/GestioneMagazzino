@@ -26,6 +26,7 @@ namespace GestioneMagazzino.Controllers
         [HttpPost()]
         public IActionResult DoLogin([FromForm] UserViewModel user)
         {
+            Task.Delay(TimeSpan.FromSeconds(5)).Wait();
             if (user.Password != "123") return Json("Password errata");
             var requestAt = DateTime.UtcNow;
             var expiresIn = requestAt + TokenAuthOption.ExpiresSpan;

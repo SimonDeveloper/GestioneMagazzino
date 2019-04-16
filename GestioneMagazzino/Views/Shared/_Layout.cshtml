@@ -18,10 +18,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Auth" asp-action="LogIn">Login</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-controller="Auth" asp-action="Register">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Auth" asp-action="LogOut">LogOut</a>
                         </li>
                     </ul>
                 </div>
@@ -30,6 +34,7 @@
     </header>
     <div class="container mt-h-60">
         <partial name="_CookieConsentPartial" />
+       
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -41,8 +46,18 @@
         </div>
     </footer>
 
-    
-    <script src="~/assets/js/web-app.min.js"></script>
+    <div id="spinner" class="position-fixed " style="z-index: 1040; top:0; left: 0; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5);">
+        <div class="d-flex w-100 h-100 justify-content-center align-items-center ">
+            <i class="fas fa-spinner fa-spin d-flex align-items-center justify-content-center fa-4x text-white"></i>
+        </div>
+    </div>
+
+<script src="~/assets/js/web-app.min.js"></script>
+<script>
+    window.onload = function() {
+        $('#spinner').css('display', 'none');
+    }
+</script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
