@@ -34,11 +34,11 @@ namespace GestioneMagazzino.Controllers
             var handler = new JwtSecurityTokenHandler();
 
             var identity = new ClaimsIdentity(
-                new GenericIdentity(user.Email, "TokenAuth"),
+                new GenericIdentity(user.Username, "TokenAuth"),
                 new[]
                 {
                     new Claim("Id", Guid.NewGuid().ToString()),
-                    new Claim("Email", user.Email),
+                    new Claim("Email", user.Username),
                     new Claim("Username", user.Username),
                     new Claim("LastName", user.Username),
                     new Claim("Role", "Admin")

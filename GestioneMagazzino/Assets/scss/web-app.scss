@@ -30,6 +30,10 @@ $input-material-border-color-focus: #1abc9c;
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
+$fa-font-path: "/assets/fonts" !default;
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
 
 
 $fsizes: 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9;

@@ -6,6 +6,13 @@
     <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Assets\webfonts\**" />
+    <Content Remove="Assets\webfonts\**" />
+    <EmbeddedResource Remove="Assets\webfonts\**" />
+    <None Remove="Assets\webfonts\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -16,8 +23,17 @@
   <ItemGroup>
     <Folder Include="Assets\js\" />
     <Folder Include="Assets\ts\" />
-    <Folder Include="wwwroot\assets\fonts\" />
     <Folder Include="wwwroot\assets\js\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\assets\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\assets\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\assets\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\assets\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\assets\fonts\fa-solid-900.woff2" />
   </ItemGroup>
 
 

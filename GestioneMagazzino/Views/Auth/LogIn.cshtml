@@ -9,6 +9,8 @@
               data-ajax-method="POST"
               data-ajax-mode="replace"
               data-ajax-update="#ajaxresult"
+              data-ajax-complete = "loginResponse"
+              data-ajax-loading="#spinner"
               class="col-12">
             <div class="form-group"> 
                 <label for="Username" class="col-form-label" >Username:</label>
@@ -22,8 +24,16 @@
         </form>
         <div class="col-24 justify-content-center d-flex flex-wrap pt-5">
             <div class="alert alert-danger d-flex flex-wrap col-12" id="ajaxresult">
-
+                <i class="fas fa-spinner"></i>
             </div>
         </div>
     </div>
 </section>
+
+@section Scripts {
+    <script>
+        function loginResponse(data) {
+            console.log(data);
+        }
+    </script>
+}
